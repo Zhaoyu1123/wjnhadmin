@@ -1,0 +1,65 @@
+{% extends "index.html" %}
+{% load bootstrap3 %}
+{% block nav %}
+    <li class="active">
+        <a href="/product/list/">
+            <i class="fa fa-dashboard"></i> <span>产品</span>
+        </a>
+    </li>
+    <li>
+        <a href="/order/list/">
+            <i class="fa fa-gavel"></i> <span>订单</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="basic_form.html">
+            <i class="fa fa-globe"></i> <span>Basic Elements</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="simple.html">
+            <i class="fa fa-glass"></i> <span>Simple tables</span>
+        </a>
+    </li>
+{% endblock %}
+{% block content %}
+    <div class="panel">
+        <header class="panel-heading">
+            产品 <a href="/product/create/" style="float: right">添加</a>
+        </header>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th>名称</th>
+                    <th>额度描述</th>
+                    <th>期限描述</th>
+                    <th>放款时效描述</th>
+                    <th>利率描述</th>
+                    <th>广告描述</th>
+                    <th>活动描述</th>
+                </tr>
+                {% for pro in product_list %}
+                    <tr>
+                        <td><a href="{{ pro.get_absolute_url }}">{{ pro.product_id }}</a></td>
+                        <td>{{ pro.product_name | default_if_none:""}}</td>
+                        <td>{{ pro.product_limit_desc | default_if_none:""}}</td>
+                        <td>{{ pro.product_term_desc | default_if_none:""}}</td>
+                        <td>{{ pro.product_speed_desc | default_if_none:""}}</td>
+                        <td>{{ pro.product_interest_desc | default_if_none:""}}</td>
+                        <td>{{ pro.product_ads_desc | default_if_none:""}}</td>
+                        <td>{{ pro.product_activity_desc | default_if_none:""}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <div class="table-foot">
+                <div align="center">
+                    {% bootstrap_pagination page_obj url=request.path extra=extra_url_param size="small" %}
+                 </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

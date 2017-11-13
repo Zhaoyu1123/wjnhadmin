@@ -1,0 +1,138 @@
+<div class="panel">
+                    <header class="panel-heading">
+                        Bordered Table
+
+                    </header>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Task</th>
+                                <th>Progress</th>
+                                <th style="width: 40px">Label</th>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>Fix and squish bugs</td>
+                                <td>
+                                    <div class="progress xs progress-striped active">
+                                        <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-green">90%</span></td>
+                            </tr>
+                        </table>
+                        <div class="table-foot">
+                            <ul class="pagination pagination-sm no-margin pull-right">
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                        </div>
+                    </div><!-- /.panel-body -->
+
+                </div>
+<div class="row">
+                    <div class="col-md-8">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                Work Progress
+                            </header>
+                            <div class="panel-body table-responsive">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Project</th>
+                                        <th>Manager</th>
+                                      <!-- <th>Client</th> -->
+                                        <th>Deadline</th>
+                                      <!-- <th>Price</th> -->
+                                        <th>Status</th>
+                                        <th>Progress</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>Facebook</td>
+                                      <td>Mark</td>
+                                      <!-- <td>Steve</td> -->
+                                      <td>10/10/2014</td>
+                                      <!-- <td>$1500</td> -->
+                                      <td><span class="label label-danger">in progress</span></td>
+                                      <td><span class="badge badge-info">50%</span></td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>Twitter</td>
+                                      <td>Evan</td>
+                                      <!-- <td>Darren</td> -->
+                                      <td>10/8/2014</td>
+                                      <!-- <td>$1500</td> -->
+                                      <td><span class="label label-success">completed</span></td>
+                                      <td><span class="badge badge-success">100%</span></td>
+                                    </tr>
+
+                                  </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div><!--end col-6 -->
+                </div>
+<div class="row">
+                    <div class="col-md-5">
+                        <div class="panel">
+                            <header class="panel-heading">
+                                Teammates
+                            </header>
+                            <ul class="list-group teammates">
+                                <li class="list-group-item">
+                                    <a href=""><img src="{% static "img/26115.jpg" %}" width="50" height="50"></a>
+                                    <span class="pull-right label label-danger inline m-t-15">Admin</span>
+                                    <a href="">Damon Parker</a>
+                                </li>
+                            </ul>
+                            <div class="panel-footer bg-white">
+                                <button class="btn btn-primary btn-addon btn-sm">
+                                    <i class="fa fa-plus"></i>
+                                    Add Teammate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                      <section class="panel tasks-widget">
+                          <header class="panel-heading">
+                              Todo list
+                          </header>
+                        <div class="panel-body">
+
+                          <div class="task-content">
+                              <ul class="task-list">
+                                  <li>
+                                      <div class="task-checkbox">
+                                          <input type="checkbox" class="flat-grey list-child"/>
+                                      </div>
+                                      <div class="task-title">
+                                          <span class="task-title-sp">Director is Modern Dashboard</span>
+                                          <span class="label label-success">2 Days</span>
+                                          <div class="pull-right hidden-phone">
+                                              <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                              <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                                              <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                          <div class=" add-task-row">
+                              <a class="btn btn-success btn-sm pull-left" href="#">Add New Tasks</a>
+                              <a class="btn btn-default btn-sm pull-right" href="#">See All Tasks</a>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                </div>
