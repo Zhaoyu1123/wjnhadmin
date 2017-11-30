@@ -931,3 +931,1029 @@ Traceback (most recent call last):
   File "/Users/zy/env/webpyenv/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
     raise self.error(token, e)
 TemplateSyntaxError: Invalid block tag on line 58: 'bootstrap_pagination', expected 'endblock'. Did you forget to register or load this tag?
+2017-11-13 12:57:21,184 [CASdjango.security.DisallowedHost] [Thread-3] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: 's3.tianqismart.com:8100'. You may need to add u's3.tianqismart.com' to ALLOWED_HOSTS.
+2017-11-13 12:57:21,559 [CASdjango.security.DisallowedHost] [Thread-1] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: 's3.tianqismart.com:8100'. You may need to add u's3.tianqismart.com' to ALLOWED_HOSTS.
+2017-11-13 17:26:18,112 [CASdjango.request] [Thread-17] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/usr/lib64/python2.7/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1364, "Field 'product_min_interest' doesn't have a default value")
+2017-11-13 17:35:44,727 [CASdjango.request] [Thread-7] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 163, in form_valid
+    return super(ModelFormMixin, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 79, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 147, in get_success_url
+    if self.success_url:
+  File "/usr/lib64/python2.7/site-packages/django/utils/functional.py", line 114, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "/usr/lib64/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/lib64/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'product_list' not found. 'product_list' is not a valid view function or pattern name.
+2017-11-13 22:02:31,956 [CASdjango.security.DisallowedHost] [Thread-4] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-13 23:09:30,237 [CASdjango.security.DisallowedHost] [Thread-5] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-14 02:03:06,845 [CASdjango.security.DisallowedHost] [Thread-10] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-14 03:07:31,832 [CASdjango.security.DisallowedHost] [Thread-11] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-14 10:02:01,949 [CASdjango.security.DisallowedHost] [Thread-16] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-14 11:06:53,523 [CASdjango.security.DisallowedHost] [Thread-17] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-14 15:39:07,038 [CASdjango.security.DisallowedHost] [Thread-23] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-14 16:05:05,915 [CASdjango.security.DisallowedHost] [Thread-24] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-14 22:58:16,523 [CASdjango.security.DisallowedHost] [Thread-29] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-14 23:05:31,414 [CASdjango.security.DisallowedHost] [Thread-30] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-15 03:13:41,937 [CASdjango.security.DisallowedHost] [Thread-35] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-15 04:08:02,709 [CASdjango.security.DisallowedHost] [Thread-36] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-15 13:14:22,989 [CASdjango.security.DisallowedHost] [Thread-41] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-15 14:08:08,409 [CASdjango.security.DisallowedHost] [Thread-42] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-15 17:11:01,813 [CASdjango.security.DisallowedHost] [Thread-47] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-15 18:07:08,957 [CASdjango.security.DisallowedHost] [Thread-48] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-15 20:50:14,362 [CASdjango.security.DisallowedHost] [Thread-52] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:15,406 [CASdjango.security.DisallowedHost] [Thread-53] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:16,446 [CASdjango.security.DisallowedHost] [Thread-54] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:17,662 [CASdjango.security.DisallowedHost] [Thread-56] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:18,645 [CASdjango.security.DisallowedHost] [Thread-57] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:19,641 [CASdjango.security.DisallowedHost] [Thread-58] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:20,662 [CASdjango.security.DisallowedHost] [Thread-59] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:21,699 [CASdjango.security.DisallowedHost] [Thread-60] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:22,671 [CASdjango.security.DisallowedHost] [Thread-61] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:23,706 [CASdjango.security.DisallowedHost] [Thread-62] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:24,696 [CASdjango.security.DisallowedHost] [Thread-63] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:25,738 [CASdjango.security.DisallowedHost] [Thread-64] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:27,029 [CASdjango.security.DisallowedHost] [Thread-66] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:28,108 [CASdjango.security.DisallowedHost] [Thread-67] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:29,175 [CASdjango.security.DisallowedHost] [Thread-68] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:30,211 [CASdjango.security.DisallowedHost] [Thread-69] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:31,273 [CASdjango.security.DisallowedHost] [Thread-70] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:32,374 [CASdjango.security.DisallowedHost] [Thread-71] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:33,403 [CASdjango.security.DisallowedHost] [Thread-72] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:34,435 [CASdjango.security.DisallowedHost] [Thread-73] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:35,472 [CASdjango.security.DisallowedHost] [Thread-74] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:36,487 [CASdjango.security.DisallowedHost] [Thread-75] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:37,565 [CASdjango.security.DisallowedHost] [Thread-76] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:38,598 [CASdjango.security.DisallowedHost] [Thread-77] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:39,639 [CASdjango.security.DisallowedHost] [Thread-78] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:40,704 [CASdjango.security.DisallowedHost] [Thread-79] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:41,715 [CASdjango.security.DisallowedHost] [Thread-80] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:42,762 [CASdjango.security.DisallowedHost] [Thread-81] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:43,834 [CASdjango.security.DisallowedHost] [Thread-82] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:44,857 [CASdjango.security.DisallowedHost] [Thread-83] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:45,819 [CASdjango.security.DisallowedHost] [Thread-84] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:46,824 [CASdjango.security.DisallowedHost] [Thread-85] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-15 20:50:47,851 [CASdjango.security.DisallowedHost] [Thread-86] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-16 00:32:00,176 [CASdjango.security.DisallowedHost] [Thread-87] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-16 00:32:00,188 [CASdjango.security.DisallowedHost] [Thread-88] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-16 01:56:58,684 [CASdjango.security.DisallowedHost] [Thread-91] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-16 02:07:15,890 [CASdjango.security.DisallowedHost] [Thread-92] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-16 07:30:47,691 [CASdjango.security.DisallowedHost] [Thread-97] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-16 08:03:47,503 [CASdjango.security.DisallowedHost] [Thread-98] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '10.177.152.217'. You may need to add u'10.177.152.217' to ALLOWED_HOSTS.
+2017-11-17 17:18:21,779 [CASdjango.security.DisallowedHost] [Thread-104] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-18 06:24:04,006 [CASdjango.security.DisallowedHost] [Thread-106] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:05,069 [CASdjango.security.DisallowedHost] [Thread-107] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:06,139 [CASdjango.security.DisallowedHost] [Thread-108] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:07,367 [CASdjango.security.DisallowedHost] [Thread-110] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:08,453 [CASdjango.security.DisallowedHost] [Thread-111] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:09,472 [CASdjango.security.DisallowedHost] [Thread-112] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:10,475 [CASdjango.security.DisallowedHost] [Thread-113] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:11,567 [CASdjango.security.DisallowedHost] [Thread-114] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:12,672 [CASdjango.security.DisallowedHost] [Thread-115] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:13,698 [CASdjango.security.DisallowedHost] [Thread-116] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:14,745 [CASdjango.security.DisallowedHost] [Thread-117] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:15,794 [CASdjango.security.DisallowedHost] [Thread-118] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:17,070 [CASdjango.security.DisallowedHost] [Thread-120] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:18,101 [CASdjango.security.DisallowedHost] [Thread-121] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:19,073 [CASdjango.security.DisallowedHost] [Thread-122] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:20,118 [CASdjango.security.DisallowedHost] [Thread-123] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:21,101 [CASdjango.security.DisallowedHost] [Thread-124] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:22,202 [CASdjango.security.DisallowedHost] [Thread-125] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:23,295 [CASdjango.security.DisallowedHost] [Thread-126] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:24,358 [CASdjango.security.DisallowedHost] [Thread-127] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:25,382 [CASdjango.security.DisallowedHost] [Thread-128] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:26,446 [CASdjango.security.DisallowedHost] [Thread-129] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:27,547 [CASdjango.security.DisallowedHost] [Thread-130] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:28,648 [CASdjango.security.DisallowedHost] [Thread-131] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:29,647 [CASdjango.security.DisallowedHost] [Thread-132] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:30,639 [CASdjango.security.DisallowedHost] [Thread-133] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:31,684 [CASdjango.security.DisallowedHost] [Thread-134] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:32,694 [CASdjango.security.DisallowedHost] [Thread-135] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:33,759 [CASdjango.security.DisallowedHost] [Thread-136] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:34,801 [CASdjango.security.DisallowedHost] [Thread-137] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:35,846 [CASdjango.security.DisallowedHost] [Thread-138] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:36,889 [CASdjango.security.DisallowedHost] [Thread-139] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-18 06:24:37,971 [CASdjango.security.DisallowedHost] [Thread-140] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: '123.206.76.197:8100'. You may need to add u'123.206.76.197' to ALLOWED_HOSTS.
+2017-11-19 05:49:11,999 [CASdjango.security.DisallowedHost] [Thread-143] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-20 02:47:12,305 [CASdjango.security.DisallowedHost] [Thread-146] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-23 04:18:41,949 [CASdjango.security.DisallowedHost] [Thread-149] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-24 08:18:22,098 [CASdjango.security.DisallowedHost] [Thread-152] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-24 13:58:51,292 [CASdjango.request] [Thread-1] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'product.add_id' in 'field list'")
+2017-11-24 14:01:24,307 [CASdjango.request] [Thread-1] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'product.status' in 'field list'")
+2017-11-24 14:10:40,212 [CASdjango.request] [Thread-14] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 163, in form_valid
+    return super(ModelFormMixin, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 79, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 147, in get_success_url
+    if self.success_url:
+  File "/usr/lib64/python2.7/site-packages/django/utils/functional.py", line 114, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "/usr/lib64/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/lib64/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'product_list' not found. 'product_list' is not a valid view function or pattern name.
+2017-11-24 14:11:41,493 [CASdjango.request] [Thread-35] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/10000001/update/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 240, in post
+    return super(BaseUpdateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/usr/lib64/python2.7/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 905, in _save_table
+    forced_update)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 955, in _do_update
+    return filtered._update(values) > 0
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 664, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 1199, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+IntegrityError: (1048, "Column 'repay_plan_url' cannot be null")
+2017-11-24 14:17:19,291 [CASdjango.request] [Thread-45] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 163, in form_valid
+    return super(ModelFormMixin, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 79, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 147, in get_success_url
+    if self.success_url:
+  File "/usr/lib64/python2.7/site-packages/django/utils/functional.py", line 114, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "/usr/lib64/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/lib64/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'product_list' not found. 'product_list' is not a valid view function or pattern name.
+2017-11-27 15:10:40,624 [CASdjango.request] [Thread-8] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/usr/lib64/python2.7/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1364, "Field 'first_add_information' doesn't have a default value")
+2017-11-27 15:11:58,334 [CASdjango.request] [Thread-14] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 163, in form_valid
+    return super(ModelFormMixin, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 79, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 147, in get_success_url
+    if self.success_url:
+  File "/usr/lib64/python2.7/site-packages/django/utils/functional.py", line 114, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "/usr/lib64/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/lib64/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'product_list' not found. 'product_list' is not a valid view function or pattern name.
+2017-11-27 15:37:09,408 [CASdjango.request] [Thread-10] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/usr/lib64/python2.7/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 106, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'repay_plan_url' cannot be null")
+2017-11-27 15:37:22,369 [CASdjango.request] [Thread-13] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/usr/lib64/python2.7/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 106, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'add_information_url' cannot be null")
+2017-11-27 15:41:09,570 [CASdjango.request] [Thread-23] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/usr/lib64/python2.7/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 106, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'product_min_interest' cannot be null")
+2017-11-27 15:46:54,829 [CASdjango.request] [Thread-34] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/usr/lib64/python2.7/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 106, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'product_max_interest' cannot be null")
+2017-11-27 16:31:07,727 [CASdjango.request] [Thread-167] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /order/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'p_order.order_limit' in 'field list'")
+2017-11-28 09:56:22,235 [CASdjango.security.DisallowedHost] [Thread-181] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-28 15:20:51,429 [CASdjango.request] [Thread-195] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /order/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'p_order.order_limit' in 'field list'")
+2017-11-28 15:21:31,215 [CASdjango.request] [Thread-231] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /order/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'p_order.order_limit' in 'field list'")
+2017-11-28 20:00:02,170 [CASdjango.security.DisallowedHost] [Thread-249] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:80] Invalid HTTP_HOST header: u'localhost.localdomain:8100'. You may need to add u'localhost.localdomain' to ALLOWED_HOSTS.
+2017-11-30 16:30:23,992 [CASdjango.request] [Thread-292] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'product.product_activity_desc' in 'field list'")
+2017-11-30 16:57:19,548 [CASdjango.request] [Thread-15] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /product/create/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/zhaoyu/wjnhadmin/orders/views.py", line 52, in form_valid
+    return super(ProductCreate, self).form_valid(form)
+  File "/usr/lib64/python2.7/site-packages/django/views/generic/edit.py", line 162, in form_valid
+    self.object = form.save()
+  File "/usr/lib64/python2.7/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 106, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/lib64/python2.7/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'add_information_url' cannot be null")
+2017-11-30 17:43:47,556 [CASdjango.request] [Thread-62] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /order/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'p_order.order_limit' in 'field list'")
+2017-11-30 17:52:42,542 [CASdjango.request] [Thread-91] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /order/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'p_order.order_limit' in 'field list'")
+2017-11-30 17:57:11,530 [CASdjango.request] [Thread-100] ERROR [/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py--line:135] Internal Server Error: /order/list/
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib64/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/usr/lib64/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib64/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/usr/lib64/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib64/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/lib64/python2.7/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'p_order.order_limit' in 'field list'")

@@ -10,7 +10,7 @@ from views import (
 
 
 urlpatterns = [
-    url(r'^list/$', ProductList.as_view()),
+    url(r'^list/$', ProductList.as_view(), name="product_list"),
     url(r'^(?P<pk>[0-9]+)/detail/$', ProductDetail.as_view(), name='product_detail'),
     url(r'^(?P<pk>[0-9]+)/update/$', ProductUpdate.as_view(), name='product_update'),
 

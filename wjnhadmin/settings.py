@@ -25,7 +25,7 @@ SECRET_KEY = 'fe(!fcwyvw-y&8#fx*v8(flyfz980^)e0yifkrygm0vfg#@wj1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['s3.tianqismart.com']
 
 
 # Application definition
@@ -81,9 +81,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'online',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'USER': 'online',
+        'PASSWORD': 'online@0927',
+        'HOST': '10.66.222.185',
         'PORT': '3306',
     }
 }
