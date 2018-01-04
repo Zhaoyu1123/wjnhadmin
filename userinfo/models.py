@@ -7,7 +7,7 @@ from django.db import models
 
 
 class User(models.Model):
-    user_id = models.BigAutoField(primary_key=True)
+    user_id = models.IntegerField(primary_key=True)
     phone = models.CharField(unique=True, max_length=64)
     create_time = models.BigIntegerField()
 
@@ -17,7 +17,7 @@ class User(models.Model):
 
 
 class UserCallRecords(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     phone = models.CharField(max_length=64)
     trade_type = models.IntegerField()
@@ -33,7 +33,7 @@ class UserCallRecords(models.Model):
 
 
 class UserCheckIdcardInfo(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     name = models.CharField(max_length=64)
     idcard = models.CharField(max_length=64)
@@ -48,7 +48,7 @@ class UserCheckIdcardInfo(models.Model):
 
 
 class UserContact(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     contact_phone = models.CharField(max_length=64)
     contact_name = models.CharField(max_length=64)
@@ -61,7 +61,7 @@ class UserContact(models.Model):
 
 
 class UserContactsPhone(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     contact_phone = models.CharField(max_length=64)
     contact_name = models.CharField(max_length=64)
@@ -73,7 +73,7 @@ class UserContactsPhone(models.Model):
 
 
 class UserFaceInfo(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     face_type = models.IntegerField()
     face_url = models.CharField(max_length=128, blank=True, null=True)
@@ -85,7 +85,7 @@ class UserFaceInfo(models.Model):
 
 
 class UserFeedback(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     content = models.TextField(blank=True, null=True)
     create_time = models.BigIntegerField(blank=True, null=True)
@@ -96,7 +96,7 @@ class UserFeedback(models.Model):
 
 
 class UserIdcardInfo(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     name = models.CharField(max_length=64)
     idcard = models.CharField(max_length=64)
@@ -114,7 +114,7 @@ class UserIdcardInfo(models.Model):
 
 
 class UserInfo(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     social_identity = models.IntegerField(blank=True, null=True)
     expected_amount = models.CharField(max_length=50, blank=True, null=True)
@@ -131,7 +131,7 @@ class UserInfo(models.Model):
 
 
 class UserSms(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     phone = models.CharField(max_length=64)
     sms_type = models.IntegerField()
@@ -147,7 +147,7 @@ class UserSms(models.Model):
 
 
 class IspPhoneBill(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     phone = models.CharField(max_length=64)
     month = models.CharField(max_length=20, blank=True, null=True)
@@ -160,7 +160,7 @@ class IspPhoneBill(models.Model):
 
 
 class IspPhoneCall(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     phone = models.CharField(max_length=64)
     trade_type = models.IntegerField()
@@ -175,7 +175,7 @@ class IspPhoneCall(models.Model):
 
 
 class IspPhoneSms(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     phone = models.CharField(max_length=64)
     sms_type = models.IntegerField()
@@ -189,7 +189,7 @@ class IspPhoneSms(models.Model):
 
 
 class IspUserInfo(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     user_id = models.BigIntegerField()
     phone = models.CharField(max_length=64)
     phone_service_password = models.CharField(max_length=16, blank=True, null=True)

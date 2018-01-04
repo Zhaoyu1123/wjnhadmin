@@ -13,9 +13,9 @@ from django.core.urlresolvers import reverse
 
 
 class POrder(models.Model):
-    order_id = models.BigAutoField(primary_key=True)
-    user_id = models.BigIntegerField()
-    product_id = models.BigIntegerField()
+    order_id = models.IntegerField(primary_key=True)
+    user_id = models.IntegerField()
+    product_id = models.IntegerField()
     order_limit = models.IntegerField(blank=True, null=True)
     order_term = models.IntegerField(blank=True, null=True)
     order_interest = models.FloatField(blank=True, null=True)
@@ -44,7 +44,7 @@ class POrder(models.Model):
 
 
 class Product(models.Model):
-    product_id = models.BigAutoField(primary_key=True)
+    product_id = models.IntegerField(primary_key=True)
     app_id = models.IntegerField()
     product_name = models.CharField(max_length=64)
     product_logo = models.CharField(max_length=1024)
