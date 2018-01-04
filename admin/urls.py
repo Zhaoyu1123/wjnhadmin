@@ -21,9 +21,7 @@ from views import (
 )
 
 urlpatterns = [
-    url('^users/', include('userinfo.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^order/', include('orders.order_urls')),
-    url(r'^product/', include('orders.product_urls')),
+    url(r'^login/', include('login.urls')),
     url(r'', index),
 ]
