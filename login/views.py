@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -13,8 +13,8 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def index(request):
-    print 22222222
-    return render(request, 'base.html', {})
+    print 1
+    return render(request, 'search.html', {})
 
 
 class LoginView(View):
@@ -41,3 +41,9 @@ class LoginView(View):
         else:
             self.error = '用户名或密码错误'
         return render(request, 'login.html', {"error": self.error})
+
+
+@login_required
+def logout(request):
+    auth_logout(request)
+    return render(request, 'login.html')

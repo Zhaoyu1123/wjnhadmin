@@ -25,6 +25,10 @@ SECRET_KEY = 'fe(!fcwyvw-y&8#fx*v8(flyfz980^)e0yifkrygm0vfg#@wj1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 60*30
+
 ALLOWED_HOSTS = ['s3.tianqismart.com']
 
 

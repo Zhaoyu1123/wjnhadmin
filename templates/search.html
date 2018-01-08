@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{%load staticfiles%}
+
+{% block nav %}
+    <li class="active">
+        <a href="/search">
+            <i class="fa fa-search-minus"></i> <span>查询服务</span>
+        </a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    查询表单
+                </header>
+                <div class="panel-body">
+                  <form class="form-inline" role="form">
+                      <div class="form-group">
+                          <label class="sr-only" for="id">身份证号</label>
+                          <input type="text" class="form-control" id="id" placeholder="身份证号">
+                      </div>
+                      <div class="form-group">
+                          <label class="sr-only" for="phone">手机号</label>
+                          <input type="text" class="form-control" id="phone" placeholder="手机号">
+                      </div>
+                      <div class="form-group">
+                          <label class="sr-only" for="name">姓名</label>
+                          <input type="text" class="form-control" id="name" placeholder="姓名">
+                      </div>
+                      <div class="form-group">
+                          <label class="sr-only" for="service">服务</label>
+                          <select class="form-control" id="service" >
+                              <option>S02</option>
+                              <option>S03</option>
+                          </select>
+                      </div>
+
+                      <button type="submit" class="btn btn-success">搜索</button>
+                  </form>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel">
+                <header class="panel-heading">
+                    查询结果
+                </header>
+                <div class="panel-body table-responsive">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>是否命中黑名单</th>
+                            <th>分数</th>
+                            <th>CODE</th>
+                            <th>响应信息</th>
+                        </tr>
+                        <tr>
+                            <td>是</td>
+                            <td>888</td>
+                            <td>R20000</td>
+                            <td>成功</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

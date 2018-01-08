@@ -11,6 +11,8 @@ from django.contrib.auth.models import User
 class Pro(models.Model):
 
     user = models.OneToOneField(User, verbose_name='用户')
+    app_id = models.IntegerField(verbose_name='app_id')
+    secret = models.CharField(max_length=100, verbose_name='app_id')
     id_num = models.CharField(max_length=100, default='', blank=True, verbose_name='身份证号')
     phone = models.CharField(max_length=200, default='', blank=True, verbose_name="联系电话")
 
