@@ -4,8 +4,13 @@
 
 {% block nav %}
     <li class="active">
-        <a href="/search">
+        <a href="/search/">
             <i class="fa fa-search-minus"></i> <span>查询服务</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/statistic/">
+            <i class="fa fa-clock-o"></i> <span>查询量统计</span>
         </a>
     </li>
 {% endblock %}
@@ -15,7 +20,7 @@
         <div class="col-md-12">
             <section class="panel">
                 <header class="panel-heading">
-                    查询表单
+                    请填写表单
                 </header>
                 <div class="panel-body">
                   <form class="form-inline" role="form">
@@ -42,34 +47,34 @@
                       <button type="submit" class="btn btn-success">搜索</button>
                   </form>
 
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="panel">
+                                <header class="panel-heading">
+                                    查询结果
+                                </header>
+                                <div class="panel-body table-responsive">
+                                    <table class="table table-hover">
+                                        <tr>
+                                            <th>是否命中黑名单</th>
+                                            <th>分数</th>
+                                            <th>CODE</th>
+                                            <th>响应信息</th>
+                                        </tr>
+                                        <tr>
+                                            <td>是</td>
+                                            <td>888</td>
+                                            <td>R20000</td>
+                                            <td>成功</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="panel">
-                <header class="panel-heading">
-                    查询结果
-                </header>
-                <div class="panel-body table-responsive">
-                    <table class="table table-hover">
-                        <tr>
-                            <th>是否命中黑名单</th>
-                            <th>分数</th>
-                            <th>CODE</th>
-                            <th>响应信息</th>
-                        </tr>
-                        <tr>
-                            <td>是</td>
-                            <td>888</td>
-                            <td>R20000</td>
-                            <td>成功</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
 

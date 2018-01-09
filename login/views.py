@@ -13,8 +13,12 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def index(request):
-    print 1
     return render(request, 'search.html', {})
+
+
+@login_required
+def statistic(request):
+    return render(request, 'statistic.html', {})
 
 
 class LoginView(View):
